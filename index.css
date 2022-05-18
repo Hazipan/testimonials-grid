@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-color: hsl(210deg, 46%, 95%);
+}
+
+.testimonialGrid {
+  width: 75vw;
+  display: grid;
+  grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+}
+
+.testimonial {
+  border-radius: 15px;
+}
+
+#daniel {
+  grid-area: "daniel";
+  background-color: hsl(263deg, 55%, 52%);
+}
+
+#jonathan {
+  grid-area: "jonathan";
+  background-color: hsl(217deg, 19%, 35%);
+}
+
+#kira {
+  grid-area: "kira";
+  background-color: white;
+  color: black;
+}
+
+#jeanette {
+  grid-area: "jeanette";
+  background-color: white;
+  color: black;
+}
+
+#patrick {
+  grid-area: "patrick";
+  background-color: hsl(219deg, 29%, 14%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: hsl(228deg, 45%, 44%);
+}
