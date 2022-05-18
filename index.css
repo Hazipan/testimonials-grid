@@ -9,54 +9,104 @@ body {
   font-weight: 500;
   color: white;
   background-color: hsl(210deg, 46%, 95%);
+  font-size: 13px;
+  height: 97vh;
 }
 
 .testimonialGrid {
-  width: 75vw;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "daniel daniel jonathan kira"
     "jeanette patrick patrick kira";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr .9fr;
+  grid-template-rows: auto auto;
+  gap: 25px;
+  padding: 0 150px;
 }
 
 .testimonial {
-  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  border-radius: 8px;
+  padding: 20px 30px;
+  box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.1);
 }
 
 #daniel {
-  grid-area: "daniel";
+  grid-area: daniel;
   background-color: hsl(263deg, 55%, 52%);
+  background-image: url('./images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
 }
 
 #jonathan {
-  grid-area: "jonathan";
+  grid-area: jonathan;
   background-color: hsl(217deg, 19%, 35%);
 }
 
 #kira {
-  grid-area: "kira";
+  grid-area: kira;
   background-color: white;
-  color: black;
+  color: rgb(60, 68, 81);
 }
 
 #jeanette {
-  grid-area: "jeanette";
+  grid-area: jeanette;
   background-color: white;
-  color: black;
+  color: rgb(60, 68, 81);;
 }
 
 #patrick {
-  grid-area: "patrick";
+  grid-area: patrick;
   background-color: hsl(219deg, 29%, 14%);
+}
+
+#patrick img {
+  border-color: hsl(263, 55%, 52%)
+}
+
+.testimonialHead {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.headshot {
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .5);
+  width: 30px;
+}
+
+.person {
+  line-height: 5px;
+}
+
+.title {
+  opacity: .5;
+}
+
+.boldText {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.quote {
+  opacity: .5;
+  margin-top: 10px;
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
   color: black;
+  position: absolute;
+  bottom: 10px;
+  width: 100vw;
 }
 
 .attribution a {
